@@ -21,13 +21,13 @@ def description(topic=None):
 
 dash.register_page(
     __name__,
-    path_template="/about/<topic>",
+    path_template="/calculate/<topic>",
     title=title,
     description=description,
     # sets a default for the path variable
-    path="/about/topic-1",
+    path="/calculate/topic-1",
     # prevents showing a Page Not Found if someone enters /about in the browser
-    redirect_from=["/about", "/about/"],
+    redirect_from=["/calculate", "/calculate/"],
 )
 
 

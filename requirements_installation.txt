@@ -2,3 +2,6 @@ pip install dash
 pip install dash-bootstrap-components
 pip install dash-bootstrap-templates
 pip install folium
+
+conda install -c conda-forge gdal
+pip install natcap.invest

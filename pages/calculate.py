@@ -1,9 +1,9 @@
-from dash import html
+from dash import html,dcc
 import dash_bootstrap_components as dbc
 import dash
 
 from .side_bar import sidebar
-from .topic_1 import layout_1
+from .carbon import layout_carbon
 from .topic_2 import layout_2
 from .topic_3 import layout_3
 
@@ -31,11 +31,19 @@ dash.register_page(
 )
 
 
-def layout(topic=None, **other_unknown_query_strings):
-    parent_card =  dbc.Card(" Here is the main About Page content", body=True)
 
-    if topic == "topic-1":
-        topic_card =  layout_1()
+
+def layout(topic=None, **other_unknown_query_strings):
+    parent_card =  dbc.Card(
+        dcc.Markdown("""基于[InVEST](https://storage.googleapis.com/releases.naturalcapitalproject.org/invest-userguide/latest/en/index.html)模型，结合国内可获取的数据情况，以可交互解释的图文形式构建计算工具。""",
+                     link_target="_blank",
+                     className="mt-4 text-center",
+                     ),
+        
+        body=True)
+
+    if topic == "carbon":
+        topic_card =  layout_carbon()
     elif topic == "topic-2":
         topic_card =  layout_2
     elif topic == "topic-3":

@@ -5,6 +5,10 @@ import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import ThemeSwitchAIO
 suppress_callback_exceptions=True
 
+# http://127.0.0.1:5000
+PORT = 5000
+ADDRESS = '127.0.0.1'
+
 # select the Bootstrap stylesheets and figure templates for the theme toggle here:
 url_theme1 = dbc.themes.FLATLY
 url_theme2 = dbc.themes.DARKLY
@@ -48,7 +52,7 @@ navbar = dbc.NavbarSimple(
     # ),
     children=[
         dbc.NavItem(dbc.NavLink("主页", href="/")),
-        dbc.NavItem(dbc.NavLink("计算", href="/calculate/topic-1")),
+        dbc.NavItem(dbc.NavLink("计算", href="/calculate/carbon")),
         dbc.NavItem(dbc.NavLink("数据库", href="/database")),
         dbc.NavItem(dbc.NavLink("TEMP", href="/temp")),
         
@@ -79,4 +83,7 @@ app.layout = dbc.Container(
 
 if __name__ == "__main__":
     print([(page['name'],page['path']) for page in  dash.page_registry.values()])
-    app.run_server(debug=True)
+    app.run_server(
+        port=PORT,
+        host=ADDRESS,
+        debug=True)

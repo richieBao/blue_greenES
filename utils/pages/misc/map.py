@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jul 18 09:35:35 2024
+Created on Wed Aug  7 18:09:03 2024
 
-@author: richie
+@author: richiebao
 """
-import dash
-from dash import Dash, html, dcc,Input, Output,callback
-
 import folium
 from folium.plugins import Draw,MeasureControl,MiniMap,MousePosition
 
-dash.register_page(__name__,name="TEMP", path='/temp')
+# dash.register_page(__name__,name="TEMP", path='/temp')
 
 def plot_map():
     #ommited code
@@ -46,23 +43,6 @@ def plot_map():
     return src_doc
 
 
-@callback(
-    Output('folium-map-container', 'children'),
-    Input('num', 'value')
-)
-def make_folium_map(num):
-    print(f"~~~{num}")
-    # mask = df['Variable'] == dropdown
-    # dff = df[mask].copy()
-    return html.Iframe(srcDoc=plot_map(), style={'width': '100%','height': '800px'})
 
-# layout = html.Div("Home page content")
-# layout = html.Div(id='folium-map-container')
 
-layout = html.Div([
-    html.Div(id='folium-map-container'),
-    html.P('Enter a composite number to see its prime factors'),
-    dcc.Input(id='num', type='number', debounce=True, min=2, step=1),
-    html.P(id='err', style={'color': 'red'}),
-    html.P(id='out')
-])
+

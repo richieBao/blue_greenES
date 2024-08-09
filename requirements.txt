@@ -4,3 +4,6 @@ dash-bootstrap-templates
 folium
 gdal
 natcap.invest
+pyodbc
+matplotlib
+dash-leaflet

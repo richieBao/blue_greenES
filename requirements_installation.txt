@@ -5,3 +5,8 @@ pip install folium
 
 conda install -c conda-forge gdal
 pip install natcap.invest
+
+pip install pyodbc
+pip install matplotlib
+
+pip install dash-leaflet

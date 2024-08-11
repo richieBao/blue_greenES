@@ -1,5 +1,8 @@
 git clone https://github.com/richieBao/blue_greenES.git
 
+git init
+git pull https://github.com/richieBao/blue_greenES.git
+
 mkvirtualenv coding_x --python=/usr/bin/python3.10
 deactivate coding_x
 workon coding_x
@@ -15,7 +18,7 @@ comment out: ctr + /
 
 mkvirtualenv daisy --python=/usr/bin/python3.10
 
-###WSGI configuration file
+###WSGI configuration file:/var/www/bluegreenes-codingx_pythonanywhere_com_wsgi.py
 import sys
 
 # add your project directory to the sys.path

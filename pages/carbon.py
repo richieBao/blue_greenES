@@ -2,10 +2,9 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import Dash, html, dcc,Input, Output,callback,ctx
 import dash_leaflet as dl
-from dash_extensions.javascript import assign
+# from dash_extensions.javascript import assign
 import json
 import matplotlib.colors as mcolors
-from urllib.parse import urljoin
 
 from utils.args import args
 # from utils.pages.carbon.carbon_callbacks import *

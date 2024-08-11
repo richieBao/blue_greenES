@@ -3,17 +3,17 @@ git clone https://github.com/richieBao/blue_greenES.git
 git init
 git pull https://github.com/richieBao/blue_greenES.git
 
-mkvirtualenv coding_x --python=/usr/bin/python3.10
-deactivate coding_x
-workon coding_x
+mkvirtualenv bluegreen --python=/usr/bin/python3.10
+deactivate bluegreen
+workon bluegreen
 
-cd dash_codingx
+cd blue_greenES
 pip install -r requirements.txt
 
 rmvirtualenv coding_x
 
 comment out: ctr + /
-
+which python
 -----------------------------------------------------------
 
 mkvirtualenv daisy --python=/usr/bin/python3.10
@@ -32,6 +32,11 @@ if project_home not in sys.path:
 from app import app
 application = app.server
 
+------------------------------------------------------------
+/home/codingx/blue_greenES
+
+/home/codingx/.virtualenvs/bluegreen
+ 
 
 ------------------------------------------------------------
 ftp://ftp.cpc.ncep.noaa.gov/wd51we/wgrib2

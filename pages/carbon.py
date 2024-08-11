@@ -8,7 +8,7 @@ import matplotlib.colors as mcolors
 
 from utils.args import args
 # from utils.pages.carbon.carbon_callbacks import *
-from utils.misc.database import accdb2df
+from utils.misc.database import SQLite2df
 
 BLANK_LINE=html.Div(style={'height':'10px'})
 
@@ -42,10 +42,10 @@ def layout_carbon():
 
 DB_GLC_INFO_SOURCE=args.db.bng_db 
 glc_table_name='glc_categories'
-glc_categories_df=accdb2df(DB_GLC_INFO_SOURCE,glc_table_name)
+glc_categories_df=SQLite2df(DB_GLC_INFO_SOURCE,glc_table_name)
 
 def glc_categories_color():     
-    glc_color_hex={str(row["lcid"]):mcolors.to_hex([row['color_r']/255,row['color_g']/255,row['color_b']/255])[1:] for _,row in glc_categories_df.iterrows()}
+    glc_color_hex={str(row["lcid"]):mcolors.to_hex([int(row['color_r'])/255,int(row['color_g'])/255,int(row['color_b'])/255])[1:] for _,row in glc_categories_df.iterrows()}
     return glc_color_hex    
 
 glc_color_hex=glc_categories_color()  

@@ -6,7 +6,7 @@ from dash_bootstrap_templates import ThemeSwitchAIO
 suppress_callback_exceptions=True
 
 # http://127.0.0.1:5000
-PORT = 5000
+PORT = 5007
 ADDRESS = '127.0.0.1'
 
 # select the Bootstrap stylesheets and figure templates for the theme toggle here:
@@ -21,8 +21,9 @@ app = dash.Dash(
     __name__,
     use_pages=True,
     # external_stylesheets=[dbc.themes.BOOTSTRAP,url_theme2,], 
-    external_stylesheets=[dbc.themes.SLATE,'/assets/custom.css',],
-    suppress_callback_exceptions=True
+    external_stylesheets=[dbc.themes.CERULEAN,'/assets/custom.css',], # SLATE
+    suppress_callback_exceptions=True,
+    prevent_initial_callbacks = True
     
 )
 # app.config.suppress_callback_exceptions=True
@@ -54,20 +55,20 @@ navbar = dbc.NavbarSimple(
         dbc.NavItem(dbc.NavLink("主页", href="/")),
         dbc.NavItem(dbc.NavLink("计算", href="/calculate/carbon")),
         dbc.NavItem(dbc.NavLink("数据库", href="/database")),
-        dbc.NavItem(dbc.NavLink("TEMP", href="/temp")),
+        # dbc.NavItem(dbc.NavLink("TEMP", href="/temp")),
         
     ],    
     
     brand="城市蓝绿空间规划与生态系统服务功能优化技术 —— 专项科学计算工具",
     brand_href="/",
-    color="dark", #"primary","dark"
-    dark=True,
+    # color="dark", #"primary","dark"
+    # dark=True,
     # className="mb-2",
 )
 
 
 app.layout = dbc.Container(
-    [navbar, theme_toggle,dash.page_container,footer],
+    [navbar, dash.page_container,footer],# theme_toggle,
     fluid=True,
 )
 

@@ -5,6 +5,7 @@ Created on Thu Aug  8 14:08:08 2024
 @author: richiebao
 """
 import matplotlib.pyplot as plt
+from pathlib import Path
    
 class AttrDict(dict):
     """
@@ -81,3 +82,12 @@ def colorize_array(array, cmap='viridis'):
     normed_data = (array - array.min()) / (array.max() - array.min())    
     cm = plt.cm.get_cmap(cmap)    
     return cm(normed_data)   
+
+def get_all_file_paths(directory,pattern="*"):
+    # Create a Path object for the directory
+    directory_path = Path(directory)
+
+    # Use rglob to recursively list all files
+    file_paths = [str(path) for path in directory_path.rglob(pattern) if path.is_file()]
+
+    return file_paths

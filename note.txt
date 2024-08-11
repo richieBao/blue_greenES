@@ -11,15 +11,9 @@ rmvirtualenv coding_x
 
 comment out: ctr + /
 
-
-
-
-
-
+-----------------------------------------------------------
 
 mkvirtualenv daisy --python=/usr/bin/python3.10
-
-
 
 ###WSGI configuration file
 import sys
@@ -36,7 +30,35 @@ from app import app
 application = app.server
 
 
+------------------------------------------------------------
+ftp://ftp.cpc.ncep.noaa.gov/wd51we/wgrib2
+
+
+terracotta optimize-rasters GLC_FCS30D_20002022_E105N35_Annual.tif -o optimized/
+terracotta ingest optimized/GLC_FCS30D_{date}_{coordi}_Annual.tif -o test.sqlite
+
+terracotta serve -d C:/Users/richi/omen_richiebao/omen_github/blue_greenES/data/GLC/test.sqlite
+terracotta connect localhost:5000
+
+cd C:\Users\richi\omen_richiebao\omen_github\blue_greenES\data\GLC
+
+terracotta serve -d sql_glc_terracotta.sqlite
+terracotta connect localhost:5000
+
+cd C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database
 
 
 
+terracotta optimize-rasters C:/Users/richi/omen_richiebao/omen_github/blue_greenES/data/GLC/original/*.tif -o C:/Users/richi/omen_richiebao/omen_github/blue_greenES/data/GLC/optimized/ --reproject True --compression auto --overwrite True --nproc -1
+
+terracotta optimize-rasters C:/Users/richi/omen_richiebao/omen_github/blue_greenES/data/GLC/original/*.tif -o C:/Users/richi/omen_richiebao/omen_github/blue_greenES/data/GLC/optimized/ --overwrite True --nproc -1
+
+
+terracotta serve -d C:/Users/richi/omen_richiebao/omen_github/blue_greenES/database/sql_glc_terracotta.sqlite
+terracotta connect localhost:5000
+
+localhost:5000/datasets?type=categorical
+localhost:5000/metadata/categorical/20002022/E105N35
+
+http://localhost:5000/singleband/categorical/20002022/E105N40/{z}/{x}/{y}.png?colormap=cividis&stretch_range=[10,200]
 

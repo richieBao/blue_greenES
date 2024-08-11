@@ -56,3 +56,31 @@
     color: #828282;
     font-weight: normal;
 }
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    color: #000000; 
+    /*background: white;*/
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+    position: absolute;
+    /*top: 10px;*/
+    bottom: 40px;
+    right: 70px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: grid;
+    z-index: 1000;
+    width: 150px;
+}
+
+.note{
+    text-align: center;
+    text-justify: inter-word;
+    font-family: roboto-light;
+    font-size:14px;
+    color:gray;
+    }

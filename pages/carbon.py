@@ -51,7 +51,7 @@ def glc_categories_color():
 glc_color_hex=glc_categories_color()  
 glc_color_hex_str=str(glc_color_hex).replace(" ", "")
 glc_color_hex_str=glc_color_hex_str.replace("'", '"')
-glc_url=args.map.glc_tile_url+"colormap=explicit&explicit_color_map="+glc_color_hex_str
+glc_url=args.map.glc_tile_url#+"colormap=explicit&explicit_color_map="+glc_color_hex_str
 # print(glc_url)
 # glc_url=args.map.glc_tile_url
 

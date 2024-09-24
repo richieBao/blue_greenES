@@ -5,3 +5,4 @@ pyodbc
 matplotlib
 dash-leaflet
 pandas
+sqlalchemy

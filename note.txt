@@ -70,3 +70,14 @@ localhost:5000/metadata/categorical/20002022/E105N35
 
 http://localhost:5000/singleband/categorical/20002022/E105N40/{z}/{x}/{y}.png?colormap=cividis&stretch_range=[10,200]
 
+------------------------------------------------------------
+requirements-20240922:
+dash
+dash_bootstrap_components
+dash_bootstrap_templates
+dash_leaflet
+matplotlib
+pandas
+sqlalchemy
+
+

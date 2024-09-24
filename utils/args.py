@@ -15,8 +15,8 @@ args=__C
 __C.db=AttrDict() 
 # __C.db.bng_db=f"database/bng_accdb.accdb" # r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.accdb"
 # __C.db.bng_db=r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.accdb"
-# __C.db.bng_db=r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.sqlite"
-__C.db.bng_db= "/home/codingx/blue_greenES/database/bng_accdb.sqlite" #"database/bng_accdb.accdb" 
+__C.db.bng_db=r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.sqlite"
+# __C.db.bng_db= "/home/codingx/blue_greenES/database/bng_accdb.sqlite" #"database/bng_accdb.accdb" 
 
 
 __C.raster=AttrDict() 
@@ -41,6 +41,7 @@ __C.map.coordi_XAUAT=(34.237075,108.967996)
 # __C.map.glc_tile_url="http://localhost:5000/singleband/categorical/20002022/E105N35/{z}/{x}/{y}.png?colormap=explicit&explicit_color_map="
 # __C.map.glc_tile_url='''http://localhost:5000/singleband/categorical/20002022/E105N35/{z}/{x}/{y}.png?colormap=explicit&explicit_color_map={"51":"99d594","10":"2b83ba","11":"ffffff","200":"404040"}'''
 __C.map.glc_tile_url='''http://localhost:5000/singleband/categorical/20002022/E105N35/{z}/{x}/{y}.png?'''
+# __C.map.glc_tile_url='''https://studio.mapbox.com/tilesets/richiebao.41r16ifc'''
 
 
 __C.sqlite=AttrDict()

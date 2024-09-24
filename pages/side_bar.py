@@ -3,8 +3,8 @@ import dash_bootstrap_components as dbc
 
 path_pagename_map = {
     "/calculate/carbon": "碳储存和封存",
-    "/calculate/topic-2": "Topic 2",
-    "/calculate/topic-3": "Topic 3"
+    "/calculate/topic-2": "",
+    "/calculate/topic-3": ""
 }
 
 def sidebar():

@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import ThemeSwitchAIO
 suppress_callback_exceptions=True
 
-# http://127.0.0.1:5000
+# http://127.0.0.1:5007
 PORT = 5007
 ADDRESS = '127.0.0.1'
 

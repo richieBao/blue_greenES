@@ -15,8 +15,8 @@ args=__C
 __C.db=AttrDict() 
 # __C.db.bng_db=f"database/bng_accdb.accdb" # r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.accdb"
 # __C.db.bng_db=r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.accdb"
-__C.db.bng_db=r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.sqlite"
-# __C.db.bng_db= "/home/codingx/blue_greenES/database/bng_accdb.sqlite" #"database/bng_accdb.accdb" 
+# __C.db.bng_db=r"C:\Users\richi\omen_richiebao\omen_github\blue_greenES\database\bng_accdb.sqlite"
+__C.db.bng_db= "/home/codingx/blue_greenES/database/bng_accdb.sqlite" #"database/bng_accdb.accdb" 
 
 
 __C.raster=AttrDict() 
